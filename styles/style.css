@@ -1,0 +1,177 @@
+/* Primary font import */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  color: white;
+  margin-right: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ADACAC;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  background-color: #ADACAC;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.tools {
+  position: fixed;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 90px;
+  padding: 3px;
+  background-color: #D9D9D9;
+  border-radius: 15px;
+  border: 5px solid #D9D9D9;
+  top: -50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  z-index: 5;
+}
+
+.tools button {
+  border-radius: 15px;
+  padding: 3px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.tools button:not(.tools__path-maker) {
+  margin-right: 10px;
+}
+
+.tools img {
+  width: 70px;
+}
+
+.tools:hover {
+  top: 10px;
+}
+
+.tools__path-maker, .tools__play {
+  width: 50%;
+  height: 100%;
+}
+
+.canvas-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  height: 90%;
+  border: 3px solid #D9D9D9;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.canvas {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  background: url("../img/soil.jpg");
+}
+
+.entities-plane {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.entities-plane #cheese {
+  position: absolute;
+  z-index: inherit;
+  left: 80%;
+  top: 40%;
+}
+
+.entities-plane .mice {
+  position: absolute;
+  z-index: inherit;
+  width: 31px;
+  height: 31px;
+}
+
+footer {
+  position: fixed;
+  bottom: 5px;
+  font-size: 12px;
+}
+/*# sourceMappingURL=style.css.map */

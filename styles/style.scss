@@ -1,0 +1,147 @@
+/* Primary font import */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// Variables
+$light-gray: #D9D9D9;
+$primary-gray: #ADACAC;
+
+// Reset css
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+}
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+i {
+    color: white;
+    margin-right: 10px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+// Styles
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $primary-gray;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    background-color: $primary-gray;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.tools {
+    position: fixed;
+    width: fit-content;
+    height: 90px;
+    padding: 3px;
+    background-color: $light-gray;
+    border-radius: 15px;
+    border: 5px solid $light-gray;
+    top: -50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease 0s;
+    z-index: 5;
+
+    button {
+        border-radius: 15px;
+        padding: 3px;
+        cursor: pointer;
+        transition: all 0.5s ease 0s;
+
+        &:not(.tools__path-maker) {
+            margin-right: 10px;
+        }
+    }
+
+    img {
+        width: 70px;
+    }
+
+    &:hover {
+        top: 10px;
+    }
+}
+.tools__path-maker, .tools__play {
+    width: 50%;
+    height: 100%;
+}
+
+.canvas-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    height: 90%;
+    //background-image: url("../img/soil.jpg");
+    border: 3px solid $light-gray;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.canvas {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    background: url("../img/soil.jpg");
+}
+.entities-plane {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    pointer-events: none; // Pro plano não impedir a interação com o canvas
+
+    #cheese {
+        position: absolute;
+        z-index: inherit;
+        left: 80%;
+        top: 40%;
+    }
+    .mice {
+        position: absolute;
+        z-index: inherit;
+        width: 31px;
+        height: 31px;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 5px;
+    font-size: 12px;
+}
